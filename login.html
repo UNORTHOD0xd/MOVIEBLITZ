@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MovieBlitz Login</title>
+  <link rel="shortcut icon" href="Movieblitz.png" type="image/x-icon">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background: linear-gradient(to right, #1a1a1a, #121212);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      animation: fadeIn 1s ease-in;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .login-container {
+      background: #1e1e1e;
+      padding: 2rem;
+      border-radius: 20px;
+      box-shadow: 0 6px 30px rgba(0, 0, 0, 0.4);
+      max-width: 400px;
+      width: 100%;
+      animation: scaleIn 0.6s ease-out;
+    }
+
+    @keyframes scaleIn {
+      from { transform: scale(0.95); opacity: 0; }
+      to { transform: scale(1); opacity: 1; }
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 2rem;
+    }
+
+    .logo img {
+      height: 60px;
+      margin-right: 10px;
+    }
+
+    .logo-text {
+      font-size: 1.8rem;
+      font-weight: bold;
+    }
+
+    .logo-text span.movie {
+      color: #ffffff;
+    }
+
+    .logo-text span.blitz {
+      color: #f4c542;
+    }
+
+    .form-group {
+      margin-bottom: 1.5rem;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 0.5rem;
+      font-weight: 600;
+      color: #ccc;
+    }
+
+    input[type="text"],
+    input[type="password"] {
+      width: 100%;
+      padding: 0.8rem;
+      background: #2a2a2a;
+      border: 1px solid #444;
+      border-radius: 10px;
+      color: #fff;
+      transition: border 0.3s, background 0.3s;
+    }
+
+    input[type="text"]:focus,
+    input[type="password"]:focus {
+      border-color: #f4c542;
+      background: #333;
+      outline: none;
+    }
+
+    .login-button {
+      width: 100%;
+      padding: 0.8rem;
+      background: #f4c542;
+      border: none;
+      border-radius: 10px;
+      color: #000;
+      font-weight: bold;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.3s ease, transform 0.2s;
+    }
+
+    .login-button:hover {
+      background: #e0b830;
+      transform: translateY(-2px);
+    }
+
+    .signup-link {
+      text-align: center;
+      margin-top: 1rem;
+      font-size: 0.9rem;
+      color: #aaa;
+    }
+
+    .signup-link a {
+      color: #f4c542;
+      text-decoration: none;
+      font-weight: 600;
+    }
+  </style>
+</head>
+<body>
+  <div class="login-container">
+    <div class="logo">
+      <img src="Movieblitz.png" alt="MovieBlitz Logo" />
+      <div class="logo-text">
+        <span class="movie">MOVIE</span><span class="blitz">BLITZ</span>
+      </div>
+    </div>
+    <form>
+      <div class="form-group">
+        <label for="username">Username</label>
+        <input type="text" id="username" name="username" required />
+      </div>
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" required />
+      </div>
+      <button class="login-button" type="submit">Login</button>
+      <div class="signup-link">
+        Don't have an account? <a href="#">Sign up</a>
+      </div>
+    </form>
+  </div>
+</body>
+<script>
+    const users = [
+      { username: "admin", password: "admin123", role: "admin" },
+      { username: "john", password: "john123", role: "user" },
+      { username: "sara", password: "sara123", role: "user" }
+    ];
+  
+    document.querySelector("form").addEventListener("submit", function (e) {
+      e.preventDefault();
+  
+      const enteredUsername = document.getElementById("username").value.trim();
+      const enteredPassword = document.getElementById("password").value;
+  
+      const user = users.find(
+        (u) => u.username === enteredUsername && u.password === enteredPassword
+      );
+  
+      if (user) {
+        alert(`Welcome ${user.username}! Redirecting to ${user.role} dashboard...`);
+        // Redirect based on role
+        if (user.role === "admin") {
+          window.location.href = "admin.html";
+        } else {
+          window.location.href = "index.html";
+        }
+      } else {
+        alert("Invalid username or password.");
+      }
+    });
+  </script>
+  
+</html>
