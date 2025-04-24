@@ -74,21 +74,23 @@
                 <span>Action</span>
             </div> 
             <!-- Trailer Button -->
-            <a href="#" class="watch-btn">
+            <a href="#" class="watch-btn" id="watchTrailerBtn">
+
                 <i class="bx bx-right-arrow"></i>
                 <span>Watch the trailer</span>
             </a>
         </div>
-         <!-- Play Btn -->
-         <i class="bx bx-right-arrow play-movie"></i>  
+        <!-- Play Btn -->
+        <i class="bx bx-right-arrow play-movie"></i>  
         <!-- Video container --> 
-        <div class="video-container">
-            <!-- Video-Box -->
-             <div class="video-box">
-                <!--Video Embed here -->
-                <i class="bx bx-x close-video"></i> <!--Close video icon-->
-             </div>
-        </div> 
+        <div class="video-container" id="videoContainer" style="display: none;">
+            <div class="video-box">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/m8e-FF8MsqU?si=RJ1b2pm8BI08od60" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <i class="bx bx-x close-video" id="closeVideo"></i>
+            </div>
+        </div>
+    </div>
+  
     </div>
     
     <div class="copyright">
@@ -96,6 +98,25 @@
     </div>
 
      
-    <script src="main.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+    const watchBtn = document.getElementById("watchTrailerBtn");
+    const videoContainer = document.getElementById("videoContainer");
+    const closeBtn = document.getElementById("closeVideo");
+    const iframe = document.getElementById("trailerIframe");
+
+    watchBtn.addEventListener("click", (e) => {
+        e.preventDefault();
+        videoContainer.style.display = "flex";
+    });
+
+    closeBtn.addEventListener("click", () => {
+        videoContainer.style.display = "none";
+        // Optional: stop the video
+        const iframe = videoContainer.querySelector("iframe");
+        iframe.src = iframe.src;
+    });
+});
+    </script>
 </body>
 </html>
