@@ -81,7 +81,7 @@
             </a>
         </div>
         <!-- Play Btn -->
-        <i class="bx bx-right-arrow play-movie"></i>  
+        <!-- <i class="bx bx-right-arrow play-movie"></i> -->
         <!-- Video container --> 
         <div class="video-container" id="videoContainer" style="display: none;">
             <div class="video-box">
@@ -90,8 +90,41 @@
             </div>
         </div>
     </div>
-  
-    </div>
+    <!-- About Movie -->
+    <div class="about-movie container">
+        <h2>The Matrix</h2>
+        <p>
+           When a beautiful stranger leads computer hacker Neo to a forbidding underworld, 
+           he discovers the shocking truth--the life he knows is the elaborate deception of an evil cyber-intelligence.
+        </p>
+        <h2 class="cast-heading">Movie Cast</h2>
+        <div class="cast">
+            <div class="cast-box">
+                <img src="" alt="" class="cast-img">
+                <span class="cast-title">Keanu Reeves</span>
+            </div>
+            <div class="cast-box">
+                <img src="" alt="" class="cast-img">
+                <span class="cast-title">Laurence Fishburne</span>
+            </div>
+            <div class="cast-box">
+                <img src="" alt="" class="cast-img">
+                <span class="cast-title">Carrie-Anne Moss</span>
+            </div>
+            <div class="cast-box">
+                <img src="" alt="" class="cast-img">
+                <span class="cast-title">Hugo Weaving</span>
+            </div>
+        </div>
+    </div> 
+    <!-- Download -->
+    <div class="download">
+        <h2 class="download-title">Download Movie</h2>
+        <div class="download-link">
+            <a href="playPage.html" download>720p</a>
+            <a href="playPage.html" download>1080p</a>
+        </div>
+    </div> 
     
     <div class="copyright">
         <p>&#169; MovieBlitz All Rights Reserved</p>
@@ -112,7 +145,6 @@
 
     closeBtn.addEventListener("click", () => {
         videoContainer.style.display = "none";
-        // Optional: stop the video
         const iframe = videoContainer.querySelector("iframe");
         iframe.src = iframe.src;
     });
