@@ -17,7 +17,7 @@
 }
 /* Custom Scroll bar */
 html::-webkit-scrollbar{
-    width: 0.8rem;
+    width: 0.7rem;
     background: transparent;
 }
 html::-webkit-scrollbar-thumb{
@@ -438,5 +438,57 @@ header{
     }
     .movies-content {
         grid-template-columns: repeat(auto-fit, minmax(214px, 1fr));
+    }
+}
+@media (max-width: 888px){
+    .nav{
+        padding: 14px 0;
+    }
+    .home {
+        min-height: 440px;
+        margin-top: 4rem !important;
+    }
+    .home-title {
+        font-size: 1.6rem;
+    }
+    .watch-btn span {
+        font-size: 0.9rem;
+    }
+    .movie-title {
+        font-size: 1rem;
+        padding-right: 30px;
+    }
+    .play-container {
+        min-height: 440px;
+        margin-top: 4rem !important;
+    }
+}
+/* For Medium Devices / Tablet Etc */
+@media (max-width: 768px) {
+    .nav {
+        padding: 11px 0;
+    }
+    .logo {
+        font-size: 1.2rem
+    }
+    section {
+        padding: 2rem 0;
+    }
+    .home-img {
+        object-position: left;
+    }
+    .movie-type {
+        font-size: 0.875rem;
+        margin-top: 2px;
+    }
+    .tags span,
+    .about-movie p {
+        font-size: 0.875rem;
+    }
+    p {
+        font-size: 0.875rem;
+    }
+    .play-text h2 {
+        font-size: 1.3rem;
     }
 }
