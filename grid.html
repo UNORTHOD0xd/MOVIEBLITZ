@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Movie List - MovieBlitz</title>
+  <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #030303;
+      color: #fcfeff;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 1068px;
+      margin: 5rem auto 4rem;
+      padding: 0 1rem;
+    }
+
+    .heading-title {
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin-bottom: 2rem;
+      color: #ff3a3a;
+    }
+
+    .movie-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .movie-box {
+      position: relative;
+      height: 350px;
+      overflow: hidden;
+      border-radius: 0.5rem;
+    }
+
+    .movie-box img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+
+    .movie-box:hover img {
+      transform: scale(1.05);
+    }
+
+    .box-text {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      padding: 1rem;
+      background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+    }
+
+    .movie-title {
+      font-size: 1.1rem;
+      font-weight: 500;
+    }
+
+    .movie-type {
+      font-size: 0.875rem;
+      color: #ccc;
+    }
+
+    .navbar {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: #2d2e37;
+      display: flex;
+      justify-content: space-evenly;
+      padding: 10px 0;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .nav-link {
+      text-align: center;
+      color: #b7b7b7;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      font-size: 0.75rem;
+    }
+
+    .nav-link:hover,
+    .nav-active {
+      color: #fcfeff;
+    }
+
+    .nav-link i {
+      font-size: 1.5rem;
+      margin-bottom: 0.2rem;
+    }
+
+    .copyright {
+      text-align: center;
+      padding: 1.5rem 0 5rem;
+      font-size: 0.85rem;
+      color: #888;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2 class="heading-title">Movie List</h2>
+    <div class="movie-grid">
+      <div class="movie-box">
+        <img src="Genres/Action/Matrix.jpg" alt="The Matrix">
+        <div class="box-text">
+          <h3 class="movie-title">The Matrix</h3>
+          <span class="movie-type">Action</span>
+        </div>
+      </div>
+      <div class="movie-box">
+        <img src="Genres/Adventure/Dune.webp" alt="Dune">
+        <div class="box-text">
+          <h3 class="movie-title">Dune</h3>
+          <span class="movie-type">Adventure</span>
+        </div>
+      </div>
+      <div class="movie-box">
+        <img src="Genres/Animated/BeeMovie.webp" alt="Bee Movie">
+        <div class="box-text">
+          <h3 class="movie-title">Bee Movie</h3>
+          <span class="movie-type">Animated</span>
+        </div>
+      </div>
+      <div class="movie-box">
+        <img src="Genres/Comedy/CIA.webp" alt="Central Intelligence">
+        <div class="box-text">
+          <h3 class="movie-title">Central Intelligence</h3>
+          <span class="movie-type">Comedy</span>
+        </div>
+      </div>
+      <div class="movie-box">
+        <img src="Genres/Action/BourneIdentity.webp" alt="The Matrix">
+        <div class="box-text">
+          <h3 class="movie-title">The Bourne Identity</h3>
+          <span class="movie-type">Action</span>
+        </div>
+      </div>
+      <div class="movie-box">
+        <img src="Genres/Adventure/Dune 2.webp" alt="Dune">
+        <div class="box-text">
+          <h3 class="movie-title">Dune 2</h3>
+          <span class="movie-type">Adventure</span>
+        </div>
+      </div>
+      <div class="movie-box">
+        <img src="Genres/Animated/BossBaby.webp" alt="Bee Movie">
+        <div class="box-text">
+          <h3 class="movie-title">Boss Baby</h3>
+          <span class="movie-type">Animated</span>
+        </div>
+      </div>
+      <div class="movie-box">
+        <img src="Genres/Comedy/Ghostbusters.webp" alt="Central Intelligence">
+        <div class="box-text">
+          <h3 class="movie-title">Ghostbusters</h3>
+          <span class="movie-type">Comedy</span>
+        </div>
+      </div>
+      <div class="movie-box">
+        <img src="Genres/Action/BourneSupremacy.webp" alt="The Matrix">
+        <div class="box-text">
+          <h3 class="movie-title">The Bourne Supremacy</h3>
+          <span class="movie-type">Action</span>
+        </div>
+      </div>
+      <div class="movie-box">
+        <img src="Genres/Adventure/Jurassic Park.webp" alt="Dune">
+        <div class="box-text">
+          <h3 class="movie-title">Jurassic Park</h3>
+          <span class="movie-type">Adventure</span>
+        </div>
+      </div>
+      <div class="movie-box">
+        <img src="Genres/Animated/DespicableMe.webp" alt="Bee Movie">
+        <div class="box-text">
+          <h3 class="movie-title">Despicable Me</h3>
+          <span class="movie-type">Animated</span>
+        </div>
+      </div>
+      <div class="movie-box">
+        <img src="Genres/Comedy/CIA.webp" alt="Central Intelligence">
+        <div class="box-text">
+          <h3 class="movie-title">Central Intelligence</h3>
+          <span class="movie-type">Comedy</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="navbar">
+    <a href="index.html" class="nav-link nav-active">
+      <i class='bx bx-home'></i>
+      <span>Home</span>
+    </a>
+    <a href="#trending" class="nav-link">
+      <i class='bx bxs-hot'></i>
+      <span>Trending</span>
+    </a>
+    <a href="#explore" class="nav-link">
+      <i class='bx bx-compass'></i>
+      <span>Explore</span>
+    </a>
+    <a href="#movies" class="nav-link">
+      <i class='bx bx-tv'></i>
+      <span>Movies</span>
+    </a>
+    <a href="#favorites" class="nav-link">
+      <i class='bx bx-heart'></i>
+      <span>Favorites</span>
+    </a>
+  </div>
+
+  <div class="copyright">
+    &#169; MovieBlitz All Rights Reserved
+  </div>
+</body>
+</html>
