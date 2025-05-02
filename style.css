@@ -492,3 +492,13 @@ header{
         font-size: 1.3rem;
     }
 }
+.user-img {
+    cursor: pointer;
+    border-radius: 50%;
+    transition: transform 0.2s ease;
+  }
+  
+  .user-img:hover {
+    transform: scale(1.05);
+  }
+  

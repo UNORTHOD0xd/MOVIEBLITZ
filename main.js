@@ -59,3 +59,8 @@ document.addEventListener("DOMContentLoaded", () => {
         trailerIframe.src = trailerSrc; // Reset the source
     });
 });
+
+document.getElementById('user-link').addEventListener('click', function (e) {
+    e.preventDefault(); // Prevent default anchor behavior
+    window.location.href = 'login.html'; // Redirect to login page
+  });
