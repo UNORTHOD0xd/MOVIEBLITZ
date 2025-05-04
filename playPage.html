@@ -29,6 +29,9 @@
             <a href="#" class="user">
                 <img src="user.jpg" alt="" class="user-img">
             </a>
+            <div class="cart">
+                <a href="cart.html">🛒 My Cart</a>
+            </div>
             <!-- NavBar-->
              <div class="navbar">
                 <a href="index.html" class="nav-link nav-active">
@@ -117,21 +120,18 @@
             </div>
         </div>
     </div> 
-    <!-- Download -->
-    <div class="download">
-        <h2 class="download-title">Download Movie</h2>
-        <div class="download-link">
-            <a href="playPage.html" download>720p</a>
-            <a href="playPage.html" download>1080p</a>
-        </div>
-    </div> 
+    <div class="movie-actions">
+        <button onclick="addToCart('Movie Title', 'buy')">Buy</button>
+        <button onclick="addToCart('Movie Title', 'rent')">Rent</button>
+      </div>
+      
     
     <div class="copyright">
         <p>&#169; MovieBlitz All Rights Reserved</p>
     </div>
 
      
-    <script>
+<script>
         document.addEventListener("DOMContentLoaded", () => {
     const watchBtn = document.getElementById("watchTrailerBtn");
     const videoContainer = document.getElementById("videoContainer");
@@ -149,6 +149,15 @@
         iframe.src = iframe.src;
     });
 });
-    </script>
+
+
+  function addToCart(title, type) {
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+    cart.push({ title: title, type: type });
+    localStorage.setItem('cart', JSON.stringify(cart));
+    alert(`${title} added to cart for ${type}`);
+  }
+
+</script>
 </body>
 </html>
