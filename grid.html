@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Movie List - MovieBlitz</title>
   <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+  <!-- Webpage Icon-->
+  <link rel="shortcut icon" href="Movieblitz.png" type="image/x-icon">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -27,7 +29,7 @@
     </div>
 
     <div class="navbar">
-      <a href="#home" class="nav-link nav-active"><i class="bx bx-home"></i><span class="nav-link-title">Home</span></a>
+      <a href="index.html" class="nav-link nav-active"><i class="bx bx-home"></i><span class="nav-link-title">Home</span></a>
       <a href="#popular" class="nav-link"><i class="bx bxs-hot"></i><span class="nav-link-title">Trending</span></a>
       <a href="#movies" class="nav-link"><i class="bx bx-compass"></i><span class="nav-link-title">Explore</span></a>
       <a href="grid.html" class="nav-link"><i class="bx bx-tv"></i><span class="nav-link-title">Movies</span></a>
@@ -36,121 +38,218 @@
   </div>
 </header>
 
+<!-- Category Filter Buttons -->
+<div class="category-buttons">
+  <button class="filter-btn active" data-category="all">All</button>
+  <button class="filter-btn" data-category="Action">Action</button>
+  <button class="filter-btn" data-category="Adventure">Adventure</button>
+  <button class="filter-btn" data-category="Animated">Animated</button>
+  <button class="filter-btn" data-category="Comedy">Comedy</button>
+  <button class="filter-btn" data-category="Drama">Drama</button>
+  <button class="filter-btn" data-category="Thriller">Thriller</button>
+  <button class="filter-btn" data-category="War">War</button>
+</div>
+
+
 <!-- Main Content -->
 <div class="container">
   <h2 class="heading-title">Movie List</h2>
 
   <!-- Grid container -->
   <div class="movies-container">
-    <div class="movie-box">
+    <div class="movie-box" data-category="Action">
       <img src="Genres/Action/Matrix.jpg" alt="The Matrix">
       <div class="box-text">
         <h3 class="movie-title">The Matrix</h3>
         <span class="movie-type">Action</span>
       </div>
     </div>
-    <div class="movie-box">
+    <div class="movie-box" data-category="Adventure">
       <img src="Genres/Adventure/Dune.webp" alt="Dune">
       <div class="box-text">
         <h3 class="movie-title">Dune</h3>
         <span class="movie-type">Adventure</span>
       </div>
     </div>
-    <div class="movie-box">
+    <div class="movie-box" data-category="Animated">
       <img src="Genres/Animated/BeeMovie.webp" alt="Bee Movie">
       <div class="box-text">
         <h3 class="movie-title">Bee Movie</h3>
         <span class="movie-type">Animated</span>
       </div>
     </div>
-    <div class="movie-box">
+    <div class="movie-box" data-category="Comedy">
       <img src="Genres/Comedy/CIA.webp" alt="Central Intelligence">
       <div class="box-text">
         <h3 class="movie-title">Central Intelligence</h3>
         <span class="movie-type">Comedy</span>
       </div>
     </div>
-    <div class="movie-box">
+    <div class="movie-box" data-category="Action">
       <img src="Genres/Action/BourneIdentity.webp" alt="The Bourne Identity">
       <div class="box-text">
         <h3 class="movie-title">The Bourne Identity</h3>
         <span class="movie-type">Action</span>
       </div>
     </div>
-    <div class="movie-box">
+    <div class="movie-box" data-category="Adventure">
       <img src="Genres/Adventure/Dune 2.webp" alt="Dune 2">
       <div class="box-text">
         <h3 class="movie-title">Dune 2</h3>
         <span class="movie-type">Adventure</span>
       </div>
     </div>
-    <div class="movie-box">
+    <div class="movie-box" data-category="Animated">
       <img src="Genres/Animated/BossBaby.webp" alt="Boss Baby">
       <div class="box-text">
         <h3 class="movie-title">Boss Baby</h3>
         <span class="movie-type">Animated</span>
       </div>
     </div>
-    <div class="movie-box">
+    <div class="movie-box" data-category="Comedy">
       <img src="Genres/Comedy/Ghostbusters.webp" alt="Ghostbusters">
       <div class="box-text">
         <h3 class="movie-title">Ghostbusters</h3>
         <span class="movie-type">Comedy</span>
       </div>
     </div>
-    <div class="movie-box">
+    <div class="movie-box" data-category="Action">
       <img src="Genres/Action/BourneSupremacy.webp" alt="The Bourne Supremacy">
       <div class="box-text">
         <h3 class="movie-title">The Bourne Supremacy</h3>
         <span class="movie-type">Action</span>
       </div>
     </div>
-    <div class="movie-box">
+    <div class="movie-box" data-category="Adventure">
       <img src="Genres/Adventure/Jurassic Park.webp" alt="Jurassic Park">
       <div class="box-text">
         <h3 class="movie-title">Jurassic Park</h3>
         <span class="movie-type">Adventure</span>
       </div>
     </div>
-    <div class="movie-box">
+    <div class="movie-box" data-category="Animated">
       <img src="Genres/Animated/DespicableMe.webp" alt="Despicable Me">
       <div class="box-text">
         <h3 class="movie-title">Despicable Me</h3>
         <span class="movie-type">Animated</span>
       </div>
     </div>
-    <div class="movie-box">
+    <div class="movie-box" data-category="Comedy">
       <img src="Genres/Comedy/MIB.webp" alt="Men In Black">
       <div class="box-text">
         <h3 class="movie-title">Men In Black</h3>
         <span class="movie-type">Comedy</span>
       </div>
     </div>
-    <div class="movie-box">
+    <div class="movie-box" data-category="Action">
       <img src="Genres/Action/BourneUltimatum.webp" alt="The Bourne Ultimatum">
       <div class="box-text">
         <h3 class="movie-title">The Bourne Ultimatum</h3>
         <span class="movie-type">Action</span>
       </div>
     </div>
-    <div class="movie-box">
+    <div class="movie-box" data-category="Adventure">
       <img src="Genres/Adventure/Jurassic World.webp" alt="Jurassic World">
       <div class="box-text">
         <h3 class="movie-title">Jurassic World</h3>
         <span class="movie-type">Adventure</span>
       </div>
     </div>
-    <div class="movie-box">
+    <div class="movie-box" data-category="Animated">
       <img src="Genres/Animated/Dragon.webp" alt="How to Train Your Dragon">
       <div class="box-text">
         <h3 class="movie-title">How to Train your Dragon</h3>
         <span class="movie-type">Animated</span>
       </div>
     </div>
-    <div class="movie-box">
+    <div class="movie-box" data-category="Comedy">
       <img src="Genres/Comedy/Madea.webp" alt="Madea">
       <div class="box-text">
         <h3 class="movie-title">Madea</h3>
+        <span class="movie-type">Comedy</span>
+      </div>
+    </div>
+    <div class="movie-box" data-category="Action">
+      <img src="Genres/Action/Dark Knight.webp" alt="The Bourne Ultimatum">
+      <div class="box-text">
+        <h3 class="movie-title">The Dark Knight</h3>
+        <span class="movie-type">Action</span>
+      </div>
+    </div>
+    <div class="movie-box" data-category="Adventure">
+      <img src="Genres/Adventure/Jumanji.webp" alt="Jurassic World">
+      <div class="box-text">
+        <h3 class="movie-title">Jumanji</h3>
+        <span class="movie-type">Adventure</span>
+      </div>
+    </div>
+    <div class="movie-box" data-category="Animated">
+      <img src="Genres/Animated/KungfuPanda.webp" alt="How to Train Your Dragon">
+      <div class="box-text">
+        <h3 class="movie-title">Kung fu Panda</h3>
+        <span class="movie-type">Animated</span>
+      </div>
+    </div>
+    <div class="movie-box" data-category="Comedy">
+      <img src="Genres/Comedy/RideAlong.webp" alt="Madea">
+      <div class="box-text">
+        <h3 class="movie-title">Ride Along</h3>
+        <span class="movie-type">Comedy</span>
+      </div>
+    </div>
+    <div class="movie-box" data-category="Action">
+      <img src="Genres/Action/DenOfThieves.webp" alt="The Bourne Ultimatum">
+      <div class="box-text">
+        <h3 class="movie-title">Den Of Thieves</h3>
+        <span class="movie-type">Action</span>
+      </div>
+    </div>
+    <div class="movie-box" data-category="Adventure">
+      <img src="Genres/Adventure/Starwars.webp" alt="Jurassic World">
+      <div class="box-text">
+        <h3 class="movie-title">Starwars</h3>
+        <span class="movie-type">Adventure</span>
+      </div>
+    </div>
+    <div class="movie-box" data-category="Animated">
+      <img src="Genres/Animated/Madagascar.webp" alt="How to Train Your Dragon">
+      <div class="box-text">
+        <h3 class="movie-title">Madagascar</h3>
+        <span class="movie-type">Animated</span>
+      </div>
+    </div>
+    <div class="movie-box" data-category="Comedy">
+      <img src="Genres/Comedy/RushHour.webp" alt="Madea">
+      <div class="box-text">
+        <h3 class="movie-title">Rush Hour</h3>
+        <span class="movie-type">Comedy</span>
+      </div>
+    </div>
+    <div class="movie-box" data-category="Action">
+      <img src="Genres/Action/Godfather.webp" alt="The Bourne Ultimatum">
+      <div class="box-text">
+        <h3 class="movie-title">God father</h3>
+        <span class="movie-type">Action</span>
+      </div>
+    </div>
+    <div class="movie-box" data-category="Adventure">
+      <img src="Genres/Adventure/Tomb Raider.webp" alt="Jurassic World">
+      <div class="box-text">
+        <h3 class="movie-title">Tomb Raider</h3>
+        <span class="movie-type">Adventure</span>
+      </div>
+    </div>
+    <div class="movie-box" data-category="Animated">
+      <img src="Genres/Animated/Mario.webp" alt="How to Train Your Dragon">
+      <div class="box-text">
+        <h3 class="movie-title">Mario Brothers</h3>
+        <span class="movie-type">Animated</span>
+      </div>
+    </div>
+    <div class="movie-box" data-category="Comedy">
+      <img src="Genres/Comedy/SoulPlane.webp" alt="Madea">
+      <div class="box-text">
+        <h3 class="movie-title">Soul Plane</h3>
         <span class="movie-type">Comedy</span>
       </div>
     </div>
@@ -160,5 +259,30 @@
 <div class="copyright">
   &#169; MovieBlitz All Rights Reserved
 </div>
+<script>
+  const filterButtons = document.querySelectorAll(".filter-btn");
+  const movieBoxes = document.querySelectorAll(".movie-box");
+
+  filterButtons.forEach(button => {
+    button.addEventListener("click", () => {
+      // Remove 'active' class from all buttons
+      filterButtons.forEach(btn => btn.classList.remove("active"));
+      button.classList.add("active");
+
+      const selectedCategory = button.getAttribute("data-category");
+
+      movieBoxes.forEach(box => {
+        const boxCategory = box.getAttribute("data-category");
+
+        if (selectedCategory === "all" || boxCategory === selectedCategory) {
+          box.style.display = "block";
+        } else {
+          box.style.display = "none";
+        }
+      });
+    });
+  });
+</script>
+
 </body>
 </html>
